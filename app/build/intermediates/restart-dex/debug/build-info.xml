@@ -5,26 +5,26 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="875689034309727"
+    timestamp="876532839939274"
     token="7183880451040175578"
     verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="105" />
+        duration="0" />
     <task
         name="instant-run-dex"
-        duration="9" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="33" />
+        duration="0" />
     <task
         name="verifier"
-        duration="2" />
+        duration="0" />
 
     <artifact
-        location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/reload-dex/debug/classes.dex"
-        type="RELOAD_DEX" />
+        location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+        type="RESOURCES" />
 
     <build
         timestamp="872747175833293"
@@ -34,11 +34,8 @@
             type="MAIN" />
     </build>
     <build
-        timestamp="875653678077404"
+        timestamp="876032406170657"
         verifier="R_CLASS_CHANGE" >
-        <artifact
-            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
         <artifact
             location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
             type="DEX" />
@@ -47,11 +44,25 @@
             type="DEX" />
     </build>
     <build
-        timestamp="875689034309727"
+        timestamp="876242587799528"
         verifier="COMPATIBLE" >
         <artifact
-            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/reload-dex/debug/classes.dex"
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/876242587799528/classes.dex"
             type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="876251489860318"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/876251489860318/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="876532839939274"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

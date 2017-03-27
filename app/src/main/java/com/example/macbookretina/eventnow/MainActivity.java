@@ -97,6 +97,7 @@ public static ArrayList<TableRow> textArray;
                         TableRow.LayoutParams.MATCH_PARENT,
                         TableRow.LayoutParams.WRAP_CONTENT));
                 tempRow.setPadding(10,10,10,10);
+                tempRow.setBackgroundResource(R.drawable.row_border);
 
                 // Here create the TextView dynamically
 
@@ -104,7 +105,7 @@ public static ArrayList<TableRow> textArray;
                 tempText.setId(numberOfRows + 111);
                 tempText.setTextColor(Color.WHITE);
                 tempText.setText(newPost.name + " " + newPost.date);
-                tempText.setPadding(5, 5, 5, 5);
+                tempText.setPadding(10, 10, 10, 10);
 
                 //tr_head[i].addView(textArray[i]);
 
