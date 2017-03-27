@@ -6,8 +6,10 @@ import android.graphics.PorterDuff;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -78,20 +80,47 @@ public static HashMap<String, Integer> map;
 //        table.addView(tempRow, new TableLayout.LayoutParams(
 //                TableLayout.LayoutParams.MATCH_PARENT,
 //                TableLayout.LayoutParams.WRAP_CONTENT));
-//        something.setOnClickListener(new View.OnClickListener()
-//        {
-//            @Override
-//            public void onClick(View v)
-//            {
-//                eventRef.push().setValue(new AddEvent.Event("hey","1"));
-//            }
-//        });
+        something.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                TableRow newRow = new TableRow(getApplicationContext());
+                newRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+
+                CheckBox newCheckBox = new CheckBox(getApplicationContext());
+
+                TextView feeTypeText = new TextView(getApplicationContext());
+                feeTypeText.setText("fee");
+                feeTypeText.setTextColor(Color.BLACK);
+                feeTypeText.setTextSize(16f);
+
+                TextView dueAmountText = new TextView(getApplicationContext());
+                dueAmountText.setText("dueAmount");
+                dueAmountText.setTextColor(Color.BLACK);
+                dueAmountText.setTextSize(16f);
+
+                TextView dueDateText = new TextView(getApplicationContext());
+                dueDateText.setText("dueDate");
+                dueDateText.setTextColor(Color.BLACK);
+                dueDateText.setTextSize(16f);
+
+                newRow.addView(newCheckBox,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.8f)));
+                newRow.addView(feeTypeText,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.8f)));
+                newRow.addView(dueAmountText,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,1.0f)));
+                newRow.addView(dueDateText,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,1.0f)));
+                table.addView(newRow);
+            }
+        });
 
         eventRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String prevChildKey) {
+                //Event data from database
                 Event newPost = dataSnapshot.getValue(Event.class);
                 System.out.println(newPost);
+
+                //Row parent class
                 TableRow tempRow = new TableRow(MainActivity.this);
                 map.put(dataSnapshot.getKey(),numberOfRows + 1);
                 tempRow.setId(numberOfRows + 1);
@@ -99,10 +128,29 @@ public static HashMap<String, Integer> map;
                 tempRow.setLayoutParams(new TableRow.LayoutParams(
                         TableRow.LayoutParams.MATCH_PARENT,
                         TableRow.LayoutParams.WRAP_CONTENT));
-                tempRow.setPadding(10,10,10,10);
+
+                //Left top right down
+                tempRow.setPadding(3,3,3,3);
                 tempRow.setBackgroundResource(R.drawable.row_border);
 
+                TableLayout.LayoutParams lp =
+                        new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,
+                                TableLayout.LayoutParams.WRAP_CONTENT);
+
+                lp.setMargins(10,10,10,10);
+                tempRow.setLayoutParams(lp);
+
+
                 // Here create the TextView dynamically
+
+                TextView capacity = new TextView(getApplicationContext());
+                capacity.setBackgroundColor(Color.parseColor("#0447a3"));
+                capacity.setText("# Going: " + "\n" + newPost.capacity);
+                capacity.setTextColor(Color.WHITE);
+                capacity.setTextSize(10f);
+                capacity.setHeight(300);
+                capacity.setPadding(10,10,10,10);
+                capacity.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
 
                 TextView tempText = new TextView(MainActivity.this);
                 tempText.setId(numberOfRows + 111);
@@ -110,19 +158,17 @@ public static HashMap<String, Integer> map;
                 tempText.setText(newPost.name + " " + newPost.date);
                 tempText.setPadding(10, 10, 10, 10);
 
-                Button btn = new Button(MainActivity.this);
-                btn.setText("hey");
 
-                //tr_head[i].addView(textArray[i]);
+                //Add all sub-components to tablerow
+                tempRow.addView(capacity,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.1f)));
+                tempRow.addView(tempText,new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.8f));
 
-                tempRow.addView(tempText);
-                tempRow.addView(btn);
 
+                //Array of tablerows...probably not necessary
                 tr_head.add(tempRow);
 
-                table.addView(tempRow, new TableLayout.LayoutParams(
-                        TableLayout.LayoutParams.MATCH_PARENT,
-                        TableLayout.LayoutParams.WRAP_CONTENT));
+                //Update table layout
+                table.addView(tempRow, lp);
                 numberOfRows++;
             }
 
