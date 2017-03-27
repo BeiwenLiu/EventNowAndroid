@@ -143,6 +143,9 @@ public static HashMap<String, Integer> map;
 
                 // Here create the TextView dynamically
 
+                TableRow.LayoutParams tableRowLP = new TableRow.LayoutParams();
+                tableRowLP.height = TableRow.LayoutParams.MATCH_PARENT;
+
                 TextView capacity = new TextView(getApplicationContext());
                 capacity.setBackgroundColor(Color.parseColor("#0447a3"));
                 capacity.setText("# Going: " + "\n" + newPost.capacity);
@@ -152,16 +155,21 @@ public static HashMap<String, Integer> map;
                 capacity.setPadding(10,10,10,10);
                 capacity.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
 
-                TextView tempText = new TextView(MainActivity.this);
-                tempText.setId(numberOfRows + 111);
+                capacity.setLayoutParams(tableRowLP);
+
+                TextView tempText = new TextView(getApplicationContext());
+                tempText.setText(newPost.name);
                 tempText.setTextColor(Color.WHITE);
-                tempText.setText(newPost.name + " " + newPost.date);
-                tempText.setPadding(10, 10, 10, 10);
+                tempText.setHeight(300);
+                tempText.setPadding(20,10,10,10);
+                tempText.setLayoutParams(tableRowLP);
+
+
 
 
                 //Add all sub-components to tablerow
-                tempRow.addView(capacity,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.1f)));
-                tempRow.addView(tempText,new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.8f));
+                tempRow.addView(capacity);
+                tempRow.addView(tempText);
 
 
                 //Array of tablerows...probably not necessary

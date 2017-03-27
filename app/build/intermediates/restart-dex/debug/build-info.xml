@@ -5,19 +5,19 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="880875395466966"
+    timestamp="881963736915678"
     token="7183880451040175578"
     verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="62" />
+        duration="55" />
     <task
         name="instant-run-dex"
-        duration="7" />
+        duration="8" />
     <task
         name="instant-run-transform"
-        duration="7" />
+        duration="6" />
     <task
         name="verifier"
         duration="1" />
@@ -175,6 +175,279 @@
     </build>
     <build
         timestamp="880875395466966"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/880875395466966/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="880930366132553"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/880930366132553/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881022888460308"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881022888460308/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881045357670154"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881045357670154/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881052228099578"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881052228099578/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881091399967673"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881091399967673/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881111282173891"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881111282173891/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881117701726477"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881117701726477/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881134672081952"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881134672081952/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881153287591029"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881153287591029/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881260938150684"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881260938150684/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881273206876909"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881273206876909/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881370218980756"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881370218980756/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881400544190517"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881400544190517/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881456086265134"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881456086265134/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881493582349196"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881493582349196/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881508517422123"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881508517422123/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881523354935258"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881523354935258/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881561809138357"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881561809138357/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881570350705053"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881570350705053/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881577535923064"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881577535923064/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881586308325836"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881586308325836/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881700867255275"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881700867255275/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881715068382786"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881715068382786/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881720205127131"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881720205127131/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881726382480562"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881726382480562/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881731719165635"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881731719165635/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881748608260961"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881748608260961/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881782407028444"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881782407028444/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881807710319917"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881807710319917/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881814960309235"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881814960309235/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881839771326566"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881839771326566/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881850358328004"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881850358328004/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881882981773794"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881882981773794/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881892695973604"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881892695973604/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881897600360847"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881897600360847/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881922324238587"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881922324238587/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881944939891952"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881944939891952/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881954180282850"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/builds/debug/881954180282850/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="881963736915678"
         verifier="COMPATIBLE" >
         <artifact
             location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/reload-dex/debug/classes.dex"
