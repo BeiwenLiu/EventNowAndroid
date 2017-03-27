@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 TableLayout table;
@@ -31,7 +32,7 @@ Button addEvent;
 public static int numberOfRows;
 public static ArrayList<TableRow> tr_head;
 public static ArrayList<TableRow> textArray;
-
+public static HashMap<String, Integer> map;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,7 @@ public static ArrayList<TableRow> textArray;
 
         FirebaseApp.initializeApp(this);
 
+        map = new HashMap<>();
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference eventRef = database.getReference("event");
         addEvent = (Button) findViewById(R.id.addevent);
@@ -91,6 +93,7 @@ public static ArrayList<TableRow> textArray;
                 Event newPost = dataSnapshot.getValue(Event.class);
                 System.out.println(newPost);
                 TableRow tempRow = new TableRow(MainActivity.this);
+                map.put(dataSnapshot.getKey(),numberOfRows + 1);
                 tempRow.setId(numberOfRows + 1);
                 tempRow.setBackgroundColor(Color.parseColor("#252525"));
                 tempRow.setLayoutParams(new TableRow.LayoutParams(
@@ -107,21 +110,30 @@ public static ArrayList<TableRow> textArray;
                 tempText.setText(newPost.name + " " + newPost.date);
                 tempText.setPadding(10, 10, 10, 10);
 
+                Button btn = new Button(MainActivity.this);
+                btn.setText("hey");
+
                 //tr_head[i].addView(textArray[i]);
 
                 tempRow.addView(tempText);
+                tempRow.addView(btn);
+
                 tr_head.add(tempRow);
 
                 table.addView(tempRow, new TableLayout.LayoutParams(
                         TableLayout.LayoutParams.MATCH_PARENT,
                         TableLayout.LayoutParams.WRAP_CONTENT));
+                numberOfRows++;
             }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String prevChildKey) {}
 
             @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {}
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+                String tempKey = dataSnapshot.getKey();
+                table.removeView(findViewById(map.get(tempKey)));
+            }
 
             @Override
             public void onChildMoved(DataSnapshot dataSnapshot, String prevChildKey) {}

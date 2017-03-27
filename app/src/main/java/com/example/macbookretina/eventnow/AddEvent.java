@@ -19,19 +19,19 @@ public class AddEvent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_event);
-        click = (Button) findViewById(R.id.click);
+        //click = (Button) findViewById(R.id.click);
 
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference eventRef = database.getReference("event");
 
-        click.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                eventRef.push().setValue(new Event("hey","1"));
-            }
-        });
+//        click.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            public void onClick(View v)
+//            {
+//                eventRef.push().setValue(new Event("hey","1"));
+//            }
+//        });
     }
 
     public static class Event {
