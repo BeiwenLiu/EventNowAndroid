@@ -5,26 +5,26 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="875344493322598"
+    timestamp="875689034309727"
     token="7183880451040175578"
-    verifier="CLASS_ADDED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="80" />
+        duration="105" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="9" />
     <task
         name="instant-run-transform"
-        duration="41" />
+        duration="33" />
     <task
         name="verifier"
         duration="2" />
 
     <artifact
-        location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
-        type="DEX" />
+        location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
     <build
         timestamp="872747175833293"
@@ -34,25 +34,24 @@
             type="MAIN" />
     </build>
     <build
-        timestamp="873632393342207"
+        timestamp="875653678077404"
         verifier="R_CLASS_CHANGE" >
-        <artifact
-            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="874259140930598"
-        verifier="CLASS_ADDED" >
         <artifact
             location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
             type="RESOURCES" />
-    </build>
-    <build
-        timestamp="875344493322598"
-        verifier="CLASS_ADDED" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
         <artifact
             location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="875689034309727"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

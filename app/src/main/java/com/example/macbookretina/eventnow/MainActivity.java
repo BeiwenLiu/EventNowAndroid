@@ -96,13 +96,14 @@ public static ArrayList<TableRow> textArray;
                 tempRow.setLayoutParams(new TableRow.LayoutParams(
                         TableRow.LayoutParams.MATCH_PARENT,
                         TableRow.LayoutParams.WRAP_CONTENT));
+                tempRow.setPadding(10,10,10,10);
 
                 // Here create the TextView dynamically
 
                 TextView tempText = new TextView(MainActivity.this);
                 tempText.setId(numberOfRows + 111);
                 tempText.setTextColor(Color.WHITE);
-                tempText.setText("hey");
+                tempText.setText(newPost.name + " " + newPost.date);
                 tempText.setPadding(5, 5, 5, 5);
 
                 //tr_head[i].addView(textArray[i]);
