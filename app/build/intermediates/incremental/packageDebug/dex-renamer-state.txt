@@ -1,0 +1,7 @@
+#Mon Mar 27 01:23:42 EDT 2017
+base.0=/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ec99b09ea6b2741d405830c1f144f0c422e4c6bc
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a2b111dafe378924f5ae75f2c34013b3b46b1f8c/classes.dex
+base.1=/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a2b111dafe378924f5ae75f2c34013b3b46b1f8c
+file.0=/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ec99b09ea6b2741d405830c1f144f0c422e4c6bc/classes.dex

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "489196264949",
+    "firebase_url": "https://eventnow-cc4c3.firebaseio.com",
+    "project_id": "eventnow-cc4c3",
+    "storage_bucket": "eventnow-cc4c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489196264949:android:1b6caf04f9e122f4",
+        "android_client_info": {
+          "package_name": "com.example.macbookretina.eventnow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489196264949-gium0as1gc56dogs9u7d84l9v952of9f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5iQx9TW9sXsTe4mEp8_GI8AibP3UrN7U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

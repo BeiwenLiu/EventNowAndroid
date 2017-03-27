@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252525"
+    tools:context="com.example.macbookretina.eventnow.MainActivity">
+    <Button
+        android:id="@+id/addevent"
+        android:layout_width="250px"
+        android:layout_height="130px"
+        android:text="Add Event"
+        android:textSize="30px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:bottomRightRadius="10dp"
+        android:bottomLeftRadius="10dp"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"/>
+    <Button
+        android:id="@+id/something"
+        android:layout_width="250px"
+        android:layout_height="130px"
+        android:text="Something"
+        android:textSize="30px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:bottomRightRadius="10dp"
+        android:bottomLeftRadius="10dp"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"/>
+    <ScrollView
+    android:layout_below="@+id/addevent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/table">
+
+    </TableLayout>
+</ScrollView>
+
+
+</RelativeLayout>

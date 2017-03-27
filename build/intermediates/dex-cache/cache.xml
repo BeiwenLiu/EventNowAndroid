@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.0_1bf88de6637a3c646b1a91a3865098cd6baa70e5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.0_406f9bed6eccc4345563567d8579aa69d9c9c64f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_684e16ff4dc606c629d1286c60ad770c2bcfbec9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.0_753e182d5d9bee407c066c0f406981dab20d08db/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6003d64df88a6ce5e961fa2bad7f1b9b97689ac1">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-10.2.1_b6dbd7fb4f72ce0567337255705b1921390543f8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.0_0a4cbc6300f1d7e0c18f585c6a0f45467ca33e6e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0a5d5553c308643a9022f15513ebdd59e9c78d82">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-10.2.1_60bcc087fe6f11d250716764afed08ecec995290/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.0_9d5ecf5fb1bf07fedd41c9fadcf2bbe4bcde748d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.0_81343c1d98ece000f4636f694f893020b386faae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_36d6ae5f379ea98df6a7d086f2ee110f80fc6fd1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/10.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d0a843615f3b5fa3a080497709f5436696149a09">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-10.2.1_dc491624c663f867fcd8f20e7523c6f24dfb2d46/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_3bddeb70467124c951e1603fbff12715e733aa26/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c0ca52ba4ed20589a92a9763ab63d1c0a1d12896">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a2b111dafe378924f5ae75f2c34013b3b46b1f8c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="399f75732ff1ac159f9e73611536f1508bf18d3b">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-10.2.1_9580927f41010f264fc1e99c6cf4a8fe6b9149f0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bdcc2a9572f18b8c90a3a157cab6cdfc97c6c736">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-10.2.1_0a30a6a803f89a38f630d472f6111f79495b4d8d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c3c7f31f7adf78f8abf0d7844a6ea9fe436aee0e">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ec99b09ea6b2741d405830c1f144f0c422e4c6bc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.0_82b86aa190badd3e93c444830afaeeea2a154850/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.0_7a6a27100ddc4904f2e3f7eb53e5d660050e37a3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a1aa1dd9917e887bfe732cc5e561ae6ae8f9a84a">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-10.2.1_b4d7fc00effa888566c3aa9f0082f6ca4a597df4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.0.0_ddae96329876c7adc7792209a1810b33f38ade3f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_41b46624790e4eb3a1b06bd4e5a6ae3ae7f5f105/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="888983f51cf34f57a93ff16832552f2f15937212">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-10.2.1_576016f58724f18603502f95d0a682088934a297/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_24296f37bd324d758c8917788741e965a3c017b6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.0_a5215b4b350766320c31538b81c4d036ffd8f234/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/10.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2a7ffe939ffd830b5d4052f3c1c4c235923790ce">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-10.2.1_1432d49a870e7a68d4937c523915d312506dc6b3/classes.dex" />
+    </item>
+
+</items>
