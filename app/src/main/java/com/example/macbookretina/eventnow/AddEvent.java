@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -14,38 +15,65 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddEvent extends AppCompatActivity {
 
-    Button click;
+    Button create;
+    Button back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_event);
-        //click = (Button) findViewById(R.id.click);
+        create = (Button) findViewById(R.id.create);
+        back = (Button) findViewById(R.id.back);
 
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference eventRef = database.getReference("event");
 
-//        click.setOnClickListener(new View.OnClickListener()
-//        {
-//            @Override
-//            public void onClick(View v)
-//            {
-//                eventRef.push().setValue(new Event("hey","1"));
-//            }
-//        });
+        create.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                EditText name = (EditText) findViewById(R.id.editText);
+                EditText date = (EditText) findViewById(R.id.editText3);
+                EditText description = (EditText) findViewById(R.id.editText4);
+                EditText capacity = (EditText) findViewById(R.id.editText8);
+                EditText location = (EditText) findViewById(R.id.editText11);
+                EditText price = (EditText) findViewById(R.id.editText10);
+                eventRef.push().setValue(new Event(name.getText().toString(),date.getText().toString(),description.getText().toString(),capacity.getText().toString(),location.getText().toString(),price.getText().toString()));
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     public static class Event {
         public String name;
         public String date;
+        public String description;
+        public String capacity;
+        public String location;
+        public String price;
 
         public Event() {
             this.name = null;
             this.date = null;
+            this.description = null;
+            this.capacity = null;
+            this.location = null;
+            this.price = null;
         }
 
-        public Event(String name, String date) {
+        public Event(String name, String date, String description, String capacity, String location, String price) {
             this.name = name;
             this.date = date;
+            this.description = description;
+            this.capacity = capacity;
+            this.location = location;
+            this.price = price;
         }
 
         public String toString() {

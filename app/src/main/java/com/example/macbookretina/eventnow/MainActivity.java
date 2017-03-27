@@ -78,14 +78,14 @@ public static HashMap<String, Integer> map;
 //        table.addView(tempRow, new TableLayout.LayoutParams(
 //                TableLayout.LayoutParams.MATCH_PARENT,
 //                TableLayout.LayoutParams.WRAP_CONTENT));
-        something.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                eventRef.push().setValue(new AddEvent.Event("hey","1"));
-            }
-        });
+//        something.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            public void onClick(View v)
+//            {
+//                eventRef.push().setValue(new AddEvent.Event("hey","1"));
+//            }
+//        });
 
         eventRef.addChildEventListener(new ChildEventListener() {
             @Override
@@ -157,15 +157,27 @@ public static HashMap<String, Integer> map;
     public static class Event {
         public String name;
         public String date;
+        public String description;
+        public String capacity;
+        public String location;
+        public String price;
 
         public Event() {
             this.name = null;
             this.date = null;
+            this.description = null;
+            this.capacity = null;
+            this.location = null;
+            this.price = null;
         }
 
-        public Event(String name, String date) {
+        public Event(String name, String date, String description, String capacity, String location, String price) {
             this.name = name;
             this.date = date;
+            this.description = description;
+            this.capacity = capacity;
+            this.location = location;
+            this.price = price;
         }
 
         public String toString() {

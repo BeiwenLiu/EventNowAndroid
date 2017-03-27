@@ -5,29 +5,23 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="878117537788475"
+    timestamp="879306718457377"
     token="7183880451040175578"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="163" />
+        duration="105" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="57" />
+        duration="8" />
     <task
         name="verifier"
-        duration="4" />
+        duration="0" />
 
-    <artifact
-        location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-        type="RESOURCES" />
-    <artifact
-        location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-        type="DEX" />
     <artifact
         location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
         type="DEX" />
@@ -40,14 +34,18 @@
             type="MAIN" />
     </build>
     <build
-        timestamp="878117537788475"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="879133852639570"
+        verifier="CLASS_ADDED" >
         <artifact
             location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
             type="RESOURCES" />
         <artifact
             location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="879306718457377"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
             type="DEX" />
