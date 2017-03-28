@@ -12,6 +12,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -171,11 +172,6 @@ public static HashMap<String, Integer> map;
                 tempText.setPadding(20,10,10,10);
 
 
-
-
-                Button newCheckBox = new Button(getApplicationContext());
-
-
                 TableLayout.LayoutParams tableRowLP1 = new TableLayout.LayoutParams();
                 tableRowLP.width = TableRow.LayoutParams.MATCH_PARENT;
 
@@ -192,9 +188,21 @@ public static HashMap<String, Integer> map;
                 tRow1.addView(tempText);
                 tRow1.setLayoutParams(tableRowLP1);
 
+                LinearLayout la = new LinearLayout(getApplicationContext());
+
+                Button newCheckBox = new Button(getApplicationContext());
+                Button newCheckBox2 = new Button(getApplicationContext());
+                Button newCheckBox3 = new Button(getApplicationContext());
+                Button newCheckBox4 = new Button(getApplicationContext());
+
+
                 //Second Row
                 TableRow tRow2 = new TableRow(getApplicationContext());
-                tRow2.addView(newCheckBox);
+                tRow2.addView(newCheckBox,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.8f)));
+                tRow2.addView(newCheckBox2,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.8f)));
+                tRow2.addView(newCheckBox3,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.8f)));
+                tRow2.addView(newCheckBox4,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.8f)));
+                tRow2.setBackgroundResource(R.drawable.row_border2);
 
                 tempLay.addView(tRow1);
                 tempLay.addView(tRow2);
