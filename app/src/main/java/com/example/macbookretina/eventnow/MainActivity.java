@@ -5,11 +5,14 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spanned;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -92,17 +95,17 @@ public static HashMap<String, Integer> map;
 
                 TextView feeTypeText = new TextView(getApplicationContext());
                 feeTypeText.setText("fee");
-                feeTypeText.setTextColor(Color.BLACK);
+                feeTypeText.setTextColor(Color.WHITE);
                 feeTypeText.setTextSize(16f);
 
                 TextView dueAmountText = new TextView(getApplicationContext());
                 dueAmountText.setText("dueAmount");
-                dueAmountText.setTextColor(Color.BLACK);
+                dueAmountText.setTextColor(Color.WHITE);
                 dueAmountText.setTextSize(16f);
 
                 TextView dueDateText = new TextView(getApplicationContext());
                 dueDateText.setText("dueDate");
-                dueDateText.setTextColor(Color.BLACK);
+                dueDateText.setTextColor(Color.WHITE);
                 dueDateText.setTextSize(16f);
 
                 newRow.addView(newCheckBox,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.8f)));
@@ -148,28 +151,53 @@ public static HashMap<String, Integer> map;
 
                 TextView capacity = new TextView(getApplicationContext());
                 capacity.setBackgroundColor(Color.parseColor("#0447a3"));
-                capacity.setText("# Going: " + "\n" + newPost.capacity);
+                capacity.setText("# Available: " + "\n" + newPost.capacity);
                 capacity.setTextColor(Color.WHITE);
                 capacity.setTextSize(10f);
-                capacity.setHeight(300);
+                capacity.setMinHeight(300);
                 capacity.setPadding(10,10,10,10);
                 capacity.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
 
                 capacity.setLayoutParams(tableRowLP);
 
                 TextView tempText = new TextView(getApplicationContext());
-                tempText.setText(newPost.name);
-                tempText.setTextColor(Color.WHITE);
-                tempText.setHeight(300);
+
+                Spanned text = Html.fromHtml("<font color=\"#7da6d8\"><b>" + newPost.name + "</b></font> <br>" + newPost.date + "<br>" + "<font color=\"#ffffff\">" + newPost.description + "</font>");
+
+                tempText.setText(text);
+                tempText.setMinHeight(100);
                 tempText.setPadding(20,10,10,10);
                 tempText.setLayoutParams(tableRowLP);
 
+//                TextView tempText2 = new TextView(getApplicationContext());
+//                tempText.setText(newPost.name);
+//                tempText.setTextColor(Color.WHITE);
+//                tempText.setHeight(300);
+//                tempText.setPadding(20,10,10,10);
 
+                Button newCheckBox = new Button(getApplicationContext());
+                newCheckBox.setMinHeight(50);
+                newCheckBox.setWidth(100);
 
+                //TableLayout within tablerow
+                TableLayout tempLay = new TableLayout(getApplicationContext());
+                //First Row
+                TableRow tRow1 = new TableRow(getApplicationContext());
+                tRow1.addView(tempText);
+                //Second Row
+                TableRow tRow2 = new TableRow(getApplicationContext());
+                tRow2.addView(newCheckBox);
+
+                tempLay.addView(tRow1);
+                tempLay.addView(tRow2);
 
                 //Add all sub-components to tablerow
                 tempRow.addView(capacity);
-                tempRow.addView(tempText);
+                tempRow.addView(tempLay);
+                //tempRow.addView(newCheckBox);
+                //tempRow.addView(tempText2);
+
+
 
 
                 //Array of tablerows...probably not necessary

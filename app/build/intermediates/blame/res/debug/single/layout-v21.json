@@ -1,18 +1,18 @@
 [
     {
         "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
-        "source": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout-v21/notification_action.xml"
+        "source": "/Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/res/layout-v21/notification_action.xml"
     },
     {
         "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
-        "source": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout-v21/notification_template_icon_group.xml"
+        "source": "/Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/res/layout-v21/notification_template_icon_group.xml"
     },
     {
         "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
-        "source": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout-v21/notification_action_tombstone.xml"
+        "source": "/Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/res/layout-v21/notification_action_tombstone.xml"
     },
     {
         "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
-        "source": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout-v21/notification_template_custom_big.xml"
+        "source": "/Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/res/layout-v21/notification_template_custom_big.xml"
     }
 ]

@@ -1,10 +1,10 @@
 [
     {
         "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+        "source": "/Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     },
     {
         "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+        "source": "/Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
     }
 ]
