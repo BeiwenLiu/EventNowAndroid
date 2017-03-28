@@ -23,6 +23,7 @@ import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Exclude;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
@@ -30,6 +31,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 TableLayout table;
@@ -39,6 +41,7 @@ public static int numberOfRows;
 public static ArrayList<TableRow> tr_head;
 public static ArrayList<TableRow> textArray;
 public static HashMap<String, Integer> map;
+public static HashMap<Integer, String> buttonMap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +50,8 @@ public static HashMap<String, Integer> map;
         FirebaseApp.initializeApp(this);
 
         map = new HashMap<>();
+        buttonMap = new HashMap<>();
+
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference eventRef = database.getReference("event");
         addEvent = (Button) findViewById(R.id.addevent);
@@ -121,7 +126,7 @@ public static HashMap<String, Integer> map;
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String prevChildKey) {
                 //Event data from database
-                Event newPost = dataSnapshot.getValue(Event.class);
+                final Event newPost = dataSnapshot.getValue(Event.class);
                 System.out.println(newPost);
 
                 //Row parent class
@@ -161,9 +166,7 @@ public static HashMap<String, Integer> map;
 
                 capacity.setLayoutParams(tableRowLP);
 
-
-
-
+                
                 TextView tempText = new TextView(getApplicationContext());
 
                 Spanned text = Html.fromHtml("<big><font color=\"#7da6d8\"><b>" + newPost.name + "</b></font></big> <br>" + newPost.date + "<br>" + "<font color=\"#ffffff\"> <big>" + newPost.description + "</big></font>");
@@ -187,24 +190,53 @@ public static HashMap<String, Integer> map;
                 tRow1.addView(tempText);
                 tRow1.setLayoutParams(tableRowLP1);
 
-                LinearLayout la = new LinearLayout(getApplicationContext());
-
-                Button newCheckBox = new Button(getApplicationContext());
+                final Button newCheckBox = new Button(getApplicationContext());
+                buttonMap.put(numberOfRows + 1, dataSnapshot.getKey());
+                newCheckBox.setId(numberOfRows + 1);
                 newCheckBox.setText("UPVOTE");
                 newCheckBox.setTextSize(8);
 
-                Button newCheckBox2 = new Button(getApplicationContext());
+                newCheckBox.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        newPost.upVote();
+                        newPost.updateDatabase(buttonMap.get(newCheckBox.getId()));
+                    }
+                });
+
+                final Button newCheckBox2 = new Button(getApplicationContext());
                 newCheckBox2.setText("DOWNVOTE");
                 newCheckBox2.setTextSize(6);
 
-                Button newCheckBox3 = new Button(getApplicationContext());
+                newCheckBox2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        newPost.downVote();
+                        newPost.updateDatabase(buttonMap.get(newCheckBox.getId()));
+                    }
+                });
+
+                final Button newCheckBox3 = new Button(getApplicationContext());
                 newCheckBox3.setText("Going");
                 newCheckBox3.setTextSize(8);
 
-                Button newCheckBox4 = new Button(getApplicationContext());
+                newCheckBox3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(newCheckBox3.getId());
+                    }
+                });
+
+                final Button newCheckBox4 = new Button(getApplicationContext());
                 newCheckBox4.setText("Share");
                 newCheckBox4.setTextSize(8);
 
+                newCheckBox4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println(newCheckBox4.getId());
+                    }
+                });
 
                 //Second Row
                 TableRow tRow2 = new TableRow(getApplicationContext());
@@ -236,6 +268,7 @@ public static HashMap<String, Integer> map;
             public void onChildRemoved(DataSnapshot dataSnapshot) {
                 String tempKey = dataSnapshot.getKey();
                 table.removeView(findViewById(map.get(tempKey)));
+                map.remove(tempKey);
             }
 
             @Override
@@ -264,6 +297,8 @@ public static HashMap<String, Integer> map;
         public String capacity;
         public String location;
         public String price;
+        public int voteCount;
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
 
         public Event() {
             this.name = null;
@@ -272,15 +307,48 @@ public static HashMap<String, Integer> map;
             this.capacity = null;
             this.location = null;
             this.price = null;
+            this.voteCount = 0;
         }
 
-        public Event(String name, String date, String description, String capacity, String location, String price) {
+        public Event(String name, String date, String description, String capacity, String location, String price, int voteCount) {
             this.name = name;
             this.date = date;
             this.description = description;
             this.capacity = capacity;
             this.location = location;
             this.price = price;
+            this.voteCount = voteCount;
+        }
+
+        public void upVote() {
+            this.voteCount++;
+        }
+
+        public void downVote() {
+            this.voteCount--;
+        }
+
+        @Exclude
+        public Map<String, Object> toMap() {
+            HashMap<String, Object> result = new HashMap<>();
+            result.put("name", this.name);
+            result.put("date", this.date);
+            result.put("description", this.description);
+            result.put("capacity", this.capacity);
+            result.put("location", this.location);
+            result.put("price", this.price);
+            result.put("voteCount", this.voteCount);
+            return result;
+        }
+
+        private void updateDatabase(String key) {
+            // Create new post at /user-posts/$userid/$postid and at
+            // /posts/$postid simultaneously
+            DatabaseReference event  = database.getReference("event");
+            Map<String, Object> childUpdates = new HashMap<>();
+            childUpdates.put(key, toMap());
+
+            event.updateChildren(childUpdates);
         }
 
         public String toString() {
