@@ -184,25 +184,35 @@ public static HashMap<String, Integer> map;
 
                 //First Row
                 TableRow tRow1 = new TableRow(getApplicationContext());
-                tRow1.setBackgroundResource(R.drawable.row_border2);
                 tRow1.addView(tempText);
                 tRow1.setLayoutParams(tableRowLP1);
 
                 LinearLayout la = new LinearLayout(getApplicationContext());
 
                 Button newCheckBox = new Button(getApplicationContext());
+                newCheckBox.setText("UPVOTE");
+                newCheckBox.setTextSize(8);
+
                 Button newCheckBox2 = new Button(getApplicationContext());
+                newCheckBox2.setText("DOWNVOTE");
+                newCheckBox2.setTextSize(6);
+
                 Button newCheckBox3 = new Button(getApplicationContext());
+                newCheckBox3.setText("Going");
+                newCheckBox3.setTextSize(8);
+
                 Button newCheckBox4 = new Button(getApplicationContext());
+                newCheckBox4.setText("Share");
+                newCheckBox4.setTextSize(8);
 
 
                 //Second Row
                 TableRow tRow2 = new TableRow(getApplicationContext());
-                tRow2.addView(newCheckBox,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.8f)));
-                tRow2.addView(newCheckBox2,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.8f)));
-                tRow2.addView(newCheckBox3,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.8f)));
-                tRow2.addView(newCheckBox4,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.8f)));
-                tRow2.setBackgroundResource(R.drawable.row_border2);
+                tRow2.addView(newCheckBox,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.2f)));
+                tRow2.addView(newCheckBox2,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.2f)));
+                tRow2.addView(newCheckBox3,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.2f)));
+                tRow2.addView(newCheckBox4,(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT,0.2f)));
+                tRow2.setBackgroundColor(Color.parseColor("#B7B7B7"));
 
                 tempLay.addView(tRow1);
                 tempLay.addView(tRow2);
@@ -210,9 +220,6 @@ public static HashMap<String, Integer> map;
                 //Add all sub-components to tablerow
                 tempRow.addView(capacity);
                 tempRow.addView(tempLay);
-
-
-
 
                 //Array of tablerows...probably not necessary
                 tr_head.add(tempRow);

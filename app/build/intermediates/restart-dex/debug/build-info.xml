@@ -6,22 +6,22 @@
     density="xxhdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1490685067049"
+    timestamp="1490686040214"
     token="7183880451040175578"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="99" />
+        duration="66" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="21" />
+        duration="11" />
     <task
         name="verifier"
-        duration="4" />
+        duration="2" />
 
     <artifact
         location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
@@ -81,7 +81,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1490684853548"
+        timestamp="1490686025407"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/MacbookRetina/Desktop/EventNow2/app/build/outputs/apk/app-debug.apk"
@@ -89,7 +89,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1490685067049"
+        timestamp="1490686040214"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
