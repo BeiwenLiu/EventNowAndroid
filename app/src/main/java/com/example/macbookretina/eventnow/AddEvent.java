@@ -42,7 +42,7 @@ public class AddEvent extends AppCompatActivity {
                 EditText capacity = (EditText) findViewById(R.id.editText8);
                 EditText location = (EditText) findViewById(R.id.editText11);
                 EditText price = (EditText) findViewById(R.id.editText10);
-                eventRef.push().setValue(new Event(name.getText().toString(),date.getText().toString(),description.getText().toString(),capacity.getText().toString(),location.getText().toString(),price.getText().toString(),0));
+                eventRef.push().setValue(new Event(name.getText().toString(),date.getText().toString(),description.getText().toString(),capacity.getText().toString(),location.getText().toString(),price.getText().toString()));
             }
         });
 
@@ -62,6 +62,7 @@ public class AddEvent extends AppCompatActivity {
         public String location;
         public String price;
         public int voteCount;
+        public int going;
 
         public Event() {
             this.name = null;
@@ -71,16 +72,18 @@ public class AddEvent extends AppCompatActivity {
             this.location = null;
             this.price = null;
             this.voteCount = 0;
+            this.going = 0;
         }
 
-        public Event(String name, String date, String description, String capacity, String location, String price, int voteCount) {
+        public Event(String name, String date, String description, String capacity, String location, String price) {
             this.name = name;
             this.date = date;
             this.description = description;
             this.capacity = capacity;
             this.location = location;
             this.price = price;
-            this.voteCount = voteCount;
+            this.voteCount = 0;
+            this.going = 0;
         }
 
         public void upVote() {

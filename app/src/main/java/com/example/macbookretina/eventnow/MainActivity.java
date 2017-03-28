@@ -157,7 +157,10 @@ public static HashMap<Integer, String> buttonMap;
 
                 TextView capacity = new TextView(getApplicationContext());
                 capacity.setBackgroundColor(Color.parseColor("#0447a3"));
-                capacity.setText("# Available: " + "\n" + newPost.capacity);
+
+                Spanned text = Html.fromHtml("<font color=\"#a3df48\"> Likes " + newPost.voteCount + "</font> <br> <br> <font color=\"#ffffff\"> Going: " + newPost.going + "</font> <br>" + "<font color=\"#ffffff\">");
+                capacity.setId(numberOfRows + 101);
+                capacity.setText(text);
                 capacity.setTextColor(Color.WHITE);
                 capacity.setTextSize(10f);
                 capacity.setMinHeight(300);
@@ -166,11 +169,11 @@ public static HashMap<Integer, String> buttonMap;
 
                 capacity.setLayoutParams(tableRowLP);
 
-                
+
                 TextView tempText = new TextView(getApplicationContext());
 
-                Spanned text = Html.fromHtml("<big><font color=\"#7da6d8\"><b>" + newPost.name + "</b></font></big> <br>" + newPost.date + "<br>" + "<font color=\"#ffffff\"> <big>" + newPost.description + "</big></font>");
-                tempText.setText(text);
+                Spanned text2 = Html.fromHtml("<big><font color=\"#7da6d8\"><b>" + newPost.name + "</b></font></big> <br>" + newPost.date + "<br>" + "<font color=\"#ffffff\"> <big>" + newPost.description + "</big></font>");
+                tempText.setText(text2);
                 tempText.setMinHeight(100);
                 tempText.setPadding(20,10,10,10);
 
@@ -223,7 +226,8 @@ public static HashMap<Integer, String> buttonMap;
                 newCheckBox3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        System.out.println(newCheckBox3.getId());
+                        newPost.upGo();
+                        newPost.updateDatabase(buttonMap.get(newCheckBox.getId()));
                     }
                 });
 
@@ -262,7 +266,12 @@ public static HashMap<Integer, String> buttonMap;
             }
 
             @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String prevChildKey) {}
+            public void onChildChanged(DataSnapshot dataSnapshot, String prevChildKey) {
+                final Event newPost = dataSnapshot.getValue(Event.class);
+                TextView temp = (TextView) findViewById(map.get(dataSnapshot.getKey()) + 100);
+                Spanned text = Html.fromHtml("<font color=\"#a3df48\"> Likes " + newPost.voteCount + "</font> <br> <br> <font color=\"#ffffff\"> Going: " + newPost.going + "</font> <br>" + "<font color=\"#ffffff\">");
+                temp.setText(text);
+            }
 
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
@@ -298,6 +307,7 @@ public static HashMap<Integer, String> buttonMap;
         public String location;
         public String price;
         public int voteCount;
+        public int going;
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
         public Event() {
@@ -308,9 +318,10 @@ public static HashMap<Integer, String> buttonMap;
             this.location = null;
             this.price = null;
             this.voteCount = 0;
+            this.going = 0;
         }
 
-        public Event(String name, String date, String description, String capacity, String location, String price, int voteCount) {
+        public Event(String name, String date, String description, String capacity, String location, String price, int voteCount, int going) {
             this.name = name;
             this.date = date;
             this.description = description;
@@ -318,6 +329,7 @@ public static HashMap<Integer, String> buttonMap;
             this.location = location;
             this.price = price;
             this.voteCount = voteCount;
+            this.going = going;
         }
 
         public void upVote() {
@@ -326,6 +338,10 @@ public static HashMap<Integer, String> buttonMap;
 
         public void downVote() {
             this.voteCount--;
+        }
+
+        public void upGo() {
+            this.going++;
         }
 
         @Exclude
@@ -338,6 +354,7 @@ public static HashMap<Integer, String> buttonMap;
             result.put("location", this.location);
             result.put("price", this.price);
             result.put("voteCount", this.voteCount);
+            result.put("going", this.going);
             return result;
         }
 
