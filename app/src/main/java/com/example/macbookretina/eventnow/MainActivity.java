@@ -160,30 +160,38 @@ public static HashMap<String, Integer> map;
 
                 capacity.setLayoutParams(tableRowLP);
 
+
+
+
                 TextView tempText = new TextView(getApplicationContext());
 
-                Spanned text = Html.fromHtml("<font color=\"#7da6d8\"><b>" + newPost.name + "</b></font> <br>" + newPost.date + "<br>" + "<font color=\"#ffffff\">" + newPost.description + "</font>");
-
+                Spanned text = Html.fromHtml("<big><font color=\"#7da6d8\"><b>" + newPost.name + "</b></font></big> <br>" + newPost.date + "<br>" + "<font color=\"#ffffff\"> <big>" + newPost.description + "</big></font>");
                 tempText.setText(text);
                 tempText.setMinHeight(100);
                 tempText.setPadding(20,10,10,10);
-                tempText.setLayoutParams(tableRowLP);
 
-//                TextView tempText2 = new TextView(getApplicationContext());
-//                tempText.setText(newPost.name);
-//                tempText.setTextColor(Color.WHITE);
-//                tempText.setHeight(300);
-//                tempText.setPadding(20,10,10,10);
+
+
 
                 Button newCheckBox = new Button(getApplicationContext());
-                newCheckBox.setMinHeight(50);
-                newCheckBox.setWidth(100);
+
+
+                TableLayout.LayoutParams tableRowLP1 = new TableLayout.LayoutParams();
+                tableRowLP.width = TableRow.LayoutParams.MATCH_PARENT;
+
+
+                TableRow.LayoutParams params = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT,1f);
 
                 //TableLayout within tablerow
                 TableLayout tempLay = new TableLayout(getApplicationContext());
+                tempLay.setLayoutParams(params);
+
                 //First Row
                 TableRow tRow1 = new TableRow(getApplicationContext());
+                tRow1.setBackgroundResource(R.drawable.row_border2);
                 tRow1.addView(tempText);
+                tRow1.setLayoutParams(tableRowLP1);
+
                 //Second Row
                 TableRow tRow2 = new TableRow(getApplicationContext());
                 tRow2.addView(newCheckBox);
@@ -194,8 +202,6 @@ public static HashMap<String, Integer> map;
                 //Add all sub-components to tablerow
                 tempRow.addView(capacity);
                 tempRow.addView(tempLay);
-                //tempRow.addView(newCheckBox);
-                //tempRow.addView(tempText2);
 
 
 
