@@ -14,5 +14,9 @@
     {
         "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
         "source": "/Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/layout-v21/place_autocomplete_fragment.xml",
+        "source": "/Users/MacbookRetina/.android/build-cache/4f5ea2d25d6a7f3e1a3ebe4e73e3be09ce29c3d4/output/res/layout-v21/place_autocomplete_fragment.xml"
     }
 ]

@@ -1,4 +1,4 @@
-#Mon Mar 27 17:15:24 EDT 2017
+#Sun Apr 02 18:45:18 EDT 2017
 base.0=/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6
 renamed.0=classes.dex
 file.0=/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex

@@ -19,6 +19,9 @@
         <activity android:name=".AddEvent">
 
         </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDcNt2MAoMM6HQWS3DVI1narZInJu9KvhE"/>
     </application>
 
 </manifest>

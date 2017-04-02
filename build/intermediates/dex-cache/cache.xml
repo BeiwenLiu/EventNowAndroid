@@ -21,6 +21,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/MacbookRetina/.android/build-cache/4f5ea2d25d6a7f3e1a3ebe4e73e3be09ce29c3d4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e4851331b3944beb6e7f77316a7661f53781da62">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6b3eb85d4cace2e8006f98f1b7ec0be615da0177/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/MacbookRetina/.android/build-cache/30439fdda191ed355c4593ea0351acd1ce4e2e8f/output/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
@@ -54,6 +63,15 @@
         revision="25.0.0"
         sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
         <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_22c7813ab30ab256e7b3d32db46b086363930f4d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/MacbookRetina/.android/build-cache/08e864803d7987b3f81dcdf642bc2a6ed26b7411/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c7626a9aa507bbbdc16188bc9a9f9bf3370c1ddd">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dcbb8c027916371d1c0bfe0b1f26ec88d65c7d5a/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -111,6 +129,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/MacbookRetina/.android/build-cache/5aa5c99c36dc3ef5d0c63dc26573f9ff1877d678/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="19696dc358ac668e341f28c41e3387d61ccdb81d">
+        <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2b570f2da607465facc82c870a3014a9ca970f40/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/MacbookRetina/.android/build-cache/d9a4a0aa160a6246a425ac8353d157c60b195bb7/output/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
@@ -124,7 +151,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="634b0576e6f782c6cb95bdd048cef7951ce38f31">
+        sha1="562af2c9ee171d3a50d61a5f51097a72d62dbbc9">
         <dex dex="/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a2b111dafe378924f5ae75f2c34013b3b46b1f8c/classes.dex" />
     </item>
     <item

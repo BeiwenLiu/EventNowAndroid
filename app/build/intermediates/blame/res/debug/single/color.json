@@ -24,6 +24,14 @@
         "source": "/Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/res/color/abc_tint_spinner.xml"
     },
     {
+        "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
+        "source": "/Users/MacbookRetina/.android/build-cache/5aa5c99c36dc3ef5d0c63dc26573f9ff1877d678/output/res/color/common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/MacbookRetina/.android/build-cache/5aa5c99c36dc3ef5d0c63dc26573f9ff1877d678/output/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
         "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
         "source": "/Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/res/color/abc_primary_text_disable_only_material_light.xml"
     },
@@ -34,6 +42,10 @@
     {
         "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
         "source": "/Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/res/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/MacbookRetina/.android/build-cache/5aa5c99c36dc3ef5d0c63dc26573f9ff1877d678/output/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",

@@ -18,8 +18,8 @@
         android:id="@+id/textView"
         android:textAppearance="@android:style/TextAppearance.Material.WindowTitle"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignLeft="@+id/create"
+        android:layout_alignStart="@+id/create" />
 
     <TextView
         android:text="Event Description:"
