@@ -306,6 +306,8 @@ public static HashMap<Integer, String> buttonMap;
         public String capacity;
         public String location;
         public String price;
+        public String lattitude;
+        public String longitude;
         public int voteCount;
         public int going;
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -332,6 +334,38 @@ public static HashMap<Integer, String> buttonMap;
             this.going = going;
         }
 
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public void setDate(String date) {
+            this.date = date;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+
+        public void setCapacity(String capacity) {
+            this.capacity = capacity;
+        }
+
+        public void setLocation(String location) {
+            this.location = location;
+        }
+
+        public void setPrice(String price) {
+            this.price = price;
+        }
+
+        public void setLattitude(String lattitude) {
+            this.lattitude = lattitude;
+        }
+
+        public void setLongitude(String longitude) {
+            this.longitude = longitude;
+        }
+
         public void upVote() {
             this.voteCount++;
         }
@@ -355,6 +389,8 @@ public static HashMap<Integer, String> buttonMap;
             result.put("price", this.price);
             result.put("voteCount", this.voteCount);
             result.put("going", this.going);
+            result.put("lattitude",this.lattitude);
+            result.put("longitude",this.longitude);
             return result;
         }
 

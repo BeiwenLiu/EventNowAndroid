@@ -45,6 +45,8 @@ public class AddEvent extends AppCompatActivity {
     Button back;
     boolean addressChange;
     Event event;
+    String lattitude;
+    String longitude;
 
     String url;
     @Override
@@ -56,6 +58,8 @@ public class AddEvent extends AppCompatActivity {
         url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + " " + "&key=AIzaSyDcNt2MAoMM6HQWS3DVI1narZInJu9KvhE";
         addressChange = false;
 
+        lattitude = null;
+        longitude = null;
         event = new Event();
 
         try {
@@ -90,7 +94,9 @@ public class AddEvent extends AppCompatActivity {
                 event.setCapacity(capacity.getText().toString());
                 event.setLocation(location.getText().toString());
                 event.setPrice(price.getText().toString());
-
+                event.setLattitude(lattitude);
+                event.setLongitude(longitude);
+                System.out.println(event.getLattitude());
                 eventRef.push().setValue(event);
             }
         });
@@ -174,6 +180,14 @@ public class AddEvent extends AppCompatActivity {
             this.going = 0;
         }
 
+        public String getLattitude() {
+            return lattitude;
+        }
+
+        public String getLongitude() {
+            return longitude;
+        }
+
         public void setName(String name) {
             this.name = name;
         }
@@ -223,6 +237,10 @@ public class AddEvent extends AppCompatActivity {
             result.put("capacity", this.capacity);
             result.put("location", this.location);
             result.put("price", this.price);
+            result.put("voteCount", this.voteCount);
+            result.put("going", this.going);
+            result.put("lattitude",this.lattitude);
+            result.put("longitude",this.longitude);
             return result;
         }
 
@@ -258,10 +276,8 @@ public class AddEvent extends AppCompatActivity {
                     responseStrBuilder.append(inputStr);
                 JSONObject a = new JSONObject(responseStrBuilder.toString());
 
-                String lattitude = a.getJSONArray("results").getJSONObject(0).getJSONObject("geometry").getJSONObject("location").get("lat").toString();
-                String longitude = a.getJSONArray("results").getJSONObject(0).getJSONObject("geometry").getJSONObject("location").get("lng").toString();
-                event.setLattitude(lattitude);
-                event.setLongitude(longitude);
+                lattitude = a.getJSONArray("results").getJSONObject(0).getJSONObject("geometry").getJSONObject("location").get("lat").toString();
+                longitude = a.getJSONArray("results").getJSONObject(0).getJSONObject("geometry").getJSONObject("location").get("lng").toString();
 
             } catch (Exception e) {
                 e.printStackTrace();
