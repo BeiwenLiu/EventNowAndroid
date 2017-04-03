@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:2:1-27:12
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:3:5-49
 		INJECTED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.x
 		INJECTED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:5:5-25:19
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:6:5-26:19
 MERGED from [com.android.support:appcompat-v7:25.0.0] /Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.0.0] /Users/MacbookRetina/.android/build-cache/f963cf2eb48dfc8c96421103f9cf3605dca90e9b/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-vector-drawable:25.0.0] /Users/MacbookRetina/.android/build-cache/59807f5c185ecd93f2bd16073e91c48672df15be/output/AndroidManifest.xml:23:5-20
@@ -35,39 +35,47 @@ MERGED from [com.android.support:support-core-ui:25.0.0] /Users/MacbookRetina/.a
 MERGED from [com.android.support:support-core-utils:25.0.0] /Users/MacbookRetina/.android/build-cache/15ac68452bd0240952f7447387937c8c50c2f278/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:25.0.0] /Users/MacbookRetina/.android/build-cache/30439fdda191ed355c4593ea0351acd1ce4e2e8f/output/AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:9:9-41
 	android:supportsRtl
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:10:9-35
 	android:allowBackup
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:7:9-35
 	android:icon
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:8:9-43
 	android:theme
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:10:9-40
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:11:9-40
 activity#com.example.macbookretina.eventnow.MainActivity
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:11:9-17:20
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:11:19-47
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:12:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:12:13-16:29
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:13:17-69
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:13:25-66
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:15:17-77
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:15:27-74
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:16:27-74
 activity#com.example.macbookretina.eventnow.AddEvent
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:19:9-21:20
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:20:9-22:20
 	android:name
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:19:19-43
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:20:19-43
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:22:9-24:70
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:23:9-25:70
 	android:value
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:24:13-68
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:25:13-68
 	android:name
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:23:13-58
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:24:13-58
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:28:5-79
+	android:name
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:28:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:29:5-80
+	android:name
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:29:22-78
 uses-sdk
 INJECTED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:25.0.0] /Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/AndroidManifest.xml:21:5-23:78
