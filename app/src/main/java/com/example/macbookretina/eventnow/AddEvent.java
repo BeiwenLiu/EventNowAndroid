@@ -1,6 +1,7 @@
 package com.example.macbookretina.eventnow;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -18,12 +19,19 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 import android.support.v4.app.FragmentActivity;
+
+import org.json.JSONObject;
 
 /**
  * Created by MacbookRetina on 3/27/17.
@@ -36,14 +44,19 @@ public class AddEvent extends AppCompatActivity {
     Button create;
     Button back;
     boolean addressChange;
+    Event event;
+
+    String url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_event);
         create = (Button) findViewById(R.id.create);
         back = (Button) findViewById(R.id.back);
-
+        url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + " " + "&key=AIzaSyDcNt2MAoMM6HQWS3DVI1narZInJu9KvhE";
         addressChange = false;
+
+        event = new Event();
 
         try {
             googlePlace = new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_FULLSCREEN)
@@ -70,7 +83,15 @@ public class AddEvent extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                eventRef.push().setValue(new Event(name.getText().toString(),date.getText().toString(),description.getText().toString(),capacity.getText().toString(),location.getText().toString(),price.getText().toString()));
+                Event event = new Event(name.getText().toString(),date.getText().toString(),description.getText().toString(),capacity.getText().toString(),location.getText().toString(),price.getText().toString());
+                event.setName(name.getText().toString());
+                event.setDate(date.getText().toString());
+                event.setDescription(description.getText().toString());
+                event.setCapacity(capacity.getText().toString());
+                event.setLocation(location.getText().toString());
+                event.setPrice(price.getText().toString());
+
+                eventRef.push().setValue(event);
             }
         });
 
@@ -108,7 +129,9 @@ public class AddEvent extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 addressChange = true;
                 Place place = PlaceAutocomplete.getPlace(this, data);
+                Retrieve task = new Retrieve();
                 location.setText(place.getAddress());
+                task.execute(place.getAddress().toString());
             } else if (resultCode == PlaceAutocomplete.RESULT_ERROR) {
                 Status status = PlaceAutocomplete.getStatus(this, data);
             } else if (resultCode == RESULT_CANCELED) {
@@ -124,6 +147,8 @@ public class AddEvent extends AppCompatActivity {
         public String capacity;
         public String location;
         public String price;
+        public String lattitude;
+        public String longitude;
         public int voteCount;
         public int going;
 
@@ -147,6 +172,38 @@ public class AddEvent extends AppCompatActivity {
             this.price = price;
             this.voteCount = 0;
             this.going = 0;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public void setDate(String date) {
+            this.date = date;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+
+        public void setCapacity(String capacity) {
+            this.capacity = capacity;
+        }
+
+        public void setLocation(String location) {
+            this.location = location;
+        }
+
+        public void setPrice(String price) {
+            this.price = price;
+        }
+
+        public void setLattitude(String lattitude) {
+            this.lattitude = lattitude;
+        }
+
+        public void setLongitude(String longitude) {
+            this.longitude = longitude;
         }
 
         public void upVote() {
@@ -174,5 +231,52 @@ public class AddEvent extends AppCompatActivity {
         }
 
 
+
+
+    }
+    class Retrieve extends AsyncTask<String, String, String> {
+
+
+        protected String doInBackground(String... urls) {
+            URL url;
+            HttpURLConnection urlConnection = null;
+            try {
+                String temp = urls[0];
+                temp = temp.replaceAll("\\s+","+");
+                url = new URL("https://maps.googleapis.com/maps/api/geocode/json?address=" + temp + "&key=AIzaSyDcNt2MAoMM6HQWS3DVI1narZInJu9KvhE");
+
+                urlConnection = (HttpURLConnection) url
+                        .openConnection();
+
+                InputStream in = urlConnection.getInputStream();
+
+                BufferedReader streamReader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
+                StringBuilder responseStrBuilder = new StringBuilder();
+
+                String inputStr;
+                while ((inputStr = streamReader.readLine()) != null)
+                    responseStrBuilder.append(inputStr);
+                JSONObject a = new JSONObject(responseStrBuilder.toString());
+
+                String lattitude = a.getJSONArray("results").getJSONObject(0).getJSONObject("geometry").getJSONObject("location").get("lat").toString();
+                String longitude = a.getJSONArray("results").getJSONObject(0).getJSONObject("geometry").getJSONObject("location").get("lng").toString();
+                event.setLattitude(lattitude);
+                event.setLongitude(longitude);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if (urlConnection != null) {
+                    urlConnection.disconnect();
+                }
+            }
+
+            return null;
+        }
+
+        protected void onPostExecute(String... urls) {
+            // TODO: check this.exception
+            // TODO: do something with the feed
+        }
     }
 }
