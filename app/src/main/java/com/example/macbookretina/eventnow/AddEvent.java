@@ -15,6 +15,12 @@ import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocomplete;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.FirebaseDatabase;
@@ -37,7 +43,7 @@ import org.json.JSONObject;
  * Created by MacbookRetina on 3/27/17.
  */
 
-public class AddEvent extends AppCompatActivity {
+public class AddEvent extends AppCompatActivity implements OnMapReadyCallback {
     int PLACE_AUTOCOMPLETE_REQUEST_CODE = 1;
     EditText location;
     Intent googlePlace;
@@ -53,6 +59,13 @@ public class AddEvent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_event);
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
+
+
         create = (Button) findViewById(R.id.create);
         back = (Button) findViewById(R.id.back);
         url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + " " + "&key=AIzaSyDcNt2MAoMM6HQWS3DVI1narZInJu9KvhE";
@@ -87,15 +100,15 @@ public class AddEvent extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Event event = new Event(name.getText().toString(),date.getText().toString(),description.getText().toString(),capacity.getText().toString(),location.getText().toString(),price.getText().toString());
+                Event event = new Event(name.getText().toString(),date.getText().toString(),description.getText().toString(),Double.parseDouble(capacity.getText().toString()),location.getText().toString(),price.getText().toString());
                 event.setName(name.getText().toString());
                 event.setDate(date.getText().toString());
                 event.setDescription(description.getText().toString());
-                event.setCapacity(capacity.getText().toString());
+                event.setCapacity(Double.parseDouble(capacity.getText().toString()));
                 event.setLocation(location.getText().toString());
                 event.setPrice(price.getText().toString());
-                event.setLattitude(lattitude);
-                event.setLongitude(longitude);
+                event.setLattitude(Double.parseDouble(lattitude));
+                event.setLongitude(Double.parseDouble(longitude));
                 System.out.println(event.getLattitude());
                 eventRef.push().setValue(event);
             }
@@ -150,11 +163,11 @@ public class AddEvent extends AppCompatActivity {
         public String name;
         public String date;
         public String description;
-        public String capacity;
+        public double capacity;
         public String location;
         public String price;
-        public String lattitude;
-        public String longitude;
+        public double lattitude;
+        public double longitude;
         public int voteCount;
         public int going;
 
@@ -162,14 +175,14 @@ public class AddEvent extends AppCompatActivity {
             this.name = null;
             this.date = null;
             this.description = null;
-            this.capacity = null;
+            this.capacity = 0;
             this.location = null;
             this.price = null;
             this.voteCount = 0;
             this.going = 0;
         }
 
-        public Event(String name, String date, String description, String capacity, String location, String price) {
+        public Event(String name, String date, String description, double capacity, String location, String price) {
             this.name = name;
             this.date = date;
             this.description = description;
@@ -180,11 +193,11 @@ public class AddEvent extends AppCompatActivity {
             this.going = 0;
         }
 
-        public String getLattitude() {
+        public double getLattitude() {
             return lattitude;
         }
 
-        public String getLongitude() {
+        public double getLongitude() {
             return longitude;
         }
 
@@ -200,7 +213,7 @@ public class AddEvent extends AppCompatActivity {
             this.description = description;
         }
 
-        public void setCapacity(String capacity) {
+        public void setCapacity(double capacity) {
             this.capacity = capacity;
         }
 
@@ -212,11 +225,11 @@ public class AddEvent extends AppCompatActivity {
             this.price = price;
         }
 
-        public void setLattitude(String lattitude) {
+        public void setLattitude(double lattitude) {
             this.lattitude = lattitude;
         }
 
-        public void setLongitude(String longitude) {
+        public void setLongitude(double longitude) {
             this.longitude = longitude;
         }
 
@@ -295,4 +308,16 @@ public class AddEvent extends AppCompatActivity {
             // TODO: do something with the feed
         }
     }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        // Add a marker in Sydney, Australia,
+        // and move the map's camera to the same location.
+        LatLng sydney = new LatLng(-33.852, 151.211);
+        googleMap.addMarker(new MarkerOptions().position(sydney)
+                .title("Marker in Sydney"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
+
 }

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:2:1-30:12
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:3:5-49
 		INJECTED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml
@@ -76,6 +76,14 @@ uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:29:5-80
 	android:name
 		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:29:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:30:5-67
+MERGED from [com.google.android.gms:play-services-maps:10.2.1] /Users/MacbookRetina/.android/build-cache/08e864803d7987b3f81dcdf642bc2a6ed26b7411/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:10.2.1] /Users/MacbookRetina/.android/build-cache/8ec028aa3d8864ba81b57e0cf144216256f3f6a8/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /Users/MacbookRetina/.android/build-cache/f66d84cb363654b078ac47c90e8c4c5b97b27184/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.2.1] /Users/MacbookRetina/.android/build-cache/567bf334ba6a794519a428f0f07b694cab3d1386/output/AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:30:22-64
 uses-sdk
 INJECTED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:25.0.0] /Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/AndroidManifest.xml:21:5-23:78
@@ -114,13 +122,6 @@ MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /Users/MacbookR
 MERGED from [com.google.firebase:firebase-iid:10.2.1] /Users/MacbookRetina/.android/build-cache/567bf334ba6a794519a428f0f07b694cab3d1386/output/AndroidManifest.xml:19:5-78
 	android:name
 		ADDED from [com.google.android.gms:play-services-maps:10.2.1] /Users/MacbookRetina/.android/build-cache/08e864803d7987b3f81dcdf642bc2a6ed26b7411/output/AndroidManifest.xml:19:22-76
-uses-permission#android.permission.INTERNET
-ADDED from [com.google.android.gms:play-services-maps:10.2.1] /Users/MacbookRetina/.android/build-cache/08e864803d7987b3f81dcdf642bc2a6ed26b7411/output/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics:10.2.1] /Users/MacbookRetina/.android/build-cache/8ec028aa3d8864ba81b57e0cf144216256f3f6a8/output/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /Users/MacbookRetina/.android/build-cache/f66d84cb363654b078ac47c90e8c4c5b97b27184/output/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-iid:10.2.1] /Users/MacbookRetina/.android/build-cache/567bf334ba6a794519a428f0f07b694cab3d1386/output/AndroidManifest.xml:20:5-66
-	android:name
-		ADDED from [com.google.android.gms:play-services-maps:10.2.1] /Users/MacbookRetina/.android/build-cache/08e864803d7987b3f81dcdf642bc2a6ed26b7411/output/AndroidManifest.xml:20:22-64
 uses-feature#0x00020000
 ADDED from [com.google.android.gms:play-services-maps:10.2.1] /Users/MacbookRetina/.android/build-cache/08e864803d7987b3f81dcdf642bc2a6ed26b7411/output/AndroidManifest.xml:21:5-77
 	android:glEsVersion

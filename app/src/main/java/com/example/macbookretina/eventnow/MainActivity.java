@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 TableLayout table;
 Button something;
 Button addEvent;
+    GPSTracker gps;
 public static int numberOfRows;
 public static ArrayList<TableRow> tr_head;
 public static ArrayList<TableRow> textArray;
@@ -76,6 +77,22 @@ public static HashMap<Integer, String> buttonMap;
         something.getBackground().setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
         addEvent.setTextColor(Color.parseColor("#0447a3"));
         something.setTextColor(Color.parseColor("#0447a3"));
+
+        gps = new GPSTracker(this);
+        // check if GPS enabled
+        if(gps.canGetLocation()){
+
+            double latitude = gps.getLatitude();
+            double longitude = gps.getLongitude();
+
+            // \n is for new line
+            Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
+        }else{
+            // can't get location
+            // GPS or Network is not enabled
+            // Ask user to enable GPS/network in settings
+            gps.showSettingsAlert();
+        }
 
 
         tr_head = new ArrayList<>();
@@ -138,7 +155,7 @@ public static HashMap<Integer, String> buttonMap;
 
         eventRef.addChildEventListener(new ChildEventListener() {
             @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String prevChildKey) {
+            public void onChildAdded(final DataSnapshot dataSnapshot, String prevChildKey) {
                 //Event data from database
                 final Event newPost = dataSnapshot.getValue(Event.class);
                 System.out.println(newPost);
@@ -229,7 +246,8 @@ public static HashMap<Integer, String> buttonMap;
                     @Override
                     public void onClick(View v) {
                         newPost.downVote();
-                        newPost.updateDatabase(buttonMap.get(newCheckBox.getId()));
+                        if (newPost.checkLimit()) {dataSnapshot.getRef().removeValue();}
+                        else {newPost.updateDatabase(buttonMap.get(newCheckBox.getId()));}
                     }
                 });
 
@@ -314,44 +332,47 @@ public static HashMap<Integer, String> buttonMap;
         });
 
 
-        LocationManager locationManager = (LocationManager)
-                getSystemService(Context.LOCATION_SERVICE);
-        LocationListener locationListener = new MyLocationListener();
+//        LocationManager locationManager = (LocationManager)
+//                getSystemService(Context.LOCATION_SERVICE);
+//        LocationListener locationListener = new MyLocationListener();
+//
+//        if ( Build.VERSION.SDK_INT >= 23 &&
+//                ContextCompat.checkSelfPermission( this, android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED &&
+//                ContextCompat.checkSelfPermission( this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//            return  ;
+//        }
+//        locationManager.requestLocationUpdates(
+//                LocationManager.GPS_PROVIDER, 5000, 10, locationListener);
 
-        if ( Build.VERSION.SDK_INT >= 23 &&
-                ContextCompat.checkSelfPermission( this, android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED &&
-                ContextCompat.checkSelfPermission( this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            return  ;
-        }
-        locationManager.requestLocationUpdates(
-                LocationManager.GPS_PROVIDER, 5000, 10, locationListener);
+
 
     }
     public static class Event {
         public String name;
         public String date;
         public String description;
-        public String capacity;
+        public double capacity;
         public String location;
         public String price;
-        public String lattitude;
-        public String longitude;
+        public double lattitude;
+        public double longitude;
         public int voteCount;
         public int going;
+        private int limit;
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
         public Event() {
             this.name = null;
             this.date = null;
             this.description = null;
-            this.capacity = null;
+            this.capacity = 0;
             this.location = null;
             this.price = null;
             this.voteCount = 0;
             this.going = 0;
         }
 
-        public Event(String name, String date, String description, String capacity, String location, String price, int voteCount, int going) {
+        public Event(String name, String date, String description, double capacity, String location, String price, int voteCount, int going) {
             this.name = name;
             this.date = date;
             this.description = description;
@@ -374,7 +395,7 @@ public static HashMap<Integer, String> buttonMap;
             this.description = description;
         }
 
-        public void setCapacity(String capacity) {
+        public void setCapacity(double capacity) {
             this.capacity = capacity;
         }
 
@@ -386,11 +407,11 @@ public static HashMap<Integer, String> buttonMap;
             this.price = price;
         }
 
-        public void setLattitude(String lattitude) {
+        public void setLattitude(double lattitude) {
             this.lattitude = lattitude;
         }
 
-        public void setLongitude(String longitude) {
+        public void setLongitude(double longitude) {
             this.longitude = longitude;
         }
 
@@ -404,6 +425,10 @@ public static HashMap<Integer, String> buttonMap;
 
         public void upGo() {
             this.going++;
+        }
+
+        public boolean checkLimit() {
+            return voteCount <= -5;
         }
 
         @Exclude
