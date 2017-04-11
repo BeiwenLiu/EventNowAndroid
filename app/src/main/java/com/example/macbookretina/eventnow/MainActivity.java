@@ -271,6 +271,12 @@ public static HashMap<Integer, String> buttonMap;
                     @Override
                     public void onClick(View v) {
                         System.out.println(newCheckBox4.getId());
+                        Intent myIntent = new Intent(MainActivity.this,
+                                GoogleMapRender.class);
+                        myIntent.putExtra("lattitude",newPost.getLattitude());
+                        myIntent.putExtra("longitude",newPost.getLongitude());
+                        startActivity(myIntent);
+
                     }
                 });
 
@@ -429,6 +435,14 @@ public static HashMap<Integer, String> buttonMap;
 
         public boolean checkLimit() {
             return voteCount <= -5;
+        }
+
+        public double getLattitude() {
+            return this.lattitude;
+        }
+
+        public double getLongitude() {
+            return this.longitude;
         }
 
         @Exclude
