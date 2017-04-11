@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:2:1-31:12
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:2:1-42:12
 	package
 		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:3:5-49
 		INJECTED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.x
 		INJECTED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:6:5-26:19
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:6:5-34:19
 MERGED from [com.android.support:appcompat-v7:25.0.0] /Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.0.0] /Users/MacbookRetina/.android/build-cache/f963cf2eb48dfc8c96421103f9cf3605dca90e9b/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-vector-drawable:25.0.0] /Users/MacbookRetina/.android/build-cache/59807f5c185ecd93f2bd16073e91c48672df15be/output/AndroidManifest.xml:23:5-20
@@ -62,28 +62,47 @@ activity#com.example.macbookretina.eventnow.AddEvent
 ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:20:9-22:20
 	android:name
 		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:20:19-43
-meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:23:9-25:70
+activity#com.example.macbookretina.eventnow.GoogleMapRender
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:24:9-26:20
+	android:name
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:24:19-50
+meta-data#com.google.android.gms.version
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:27:9-29:69
+MERGED from [com.google.android.gms:play-services-basement:10.2.1] /Users/MacbookRetina/.android/build-cache/9e0febaad031bcc238429d4e2ea45cc4e0a98f81/output/AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:25:13-68
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:29:13-66
 	android:name
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:24:13-58
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:28:13-58
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:31:9-33:70
+	android:value
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:33:13-68
+	android:name
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:32:13-58
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:28:5-79
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:36:5-79
 	android:name
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:28:22-76
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:36:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:29:5-80
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:37:5-80
 	android:name
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:29:22-78
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:37:22-78
 uses-permission#android.permission.INTERNET
-ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:30:5-67
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:38:5-67
 MERGED from [com.google.android.gms:play-services-maps:10.2.1] /Users/MacbookRetina/.android/build-cache/08e864803d7987b3f81dcdf642bc2a6ed26b7411/output/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-analytics:10.2.1] /Users/MacbookRetina/.android/build-cache/8ec028aa3d8864ba81b57e0cf144216256f3f6a8/output/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /Users/MacbookRetina/.android/build-cache/f66d84cb363654b078ac47c90e8c4c5b97b27184/output/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-iid:10.2.1] /Users/MacbookRetina/.android/build-cache/567bf334ba6a794519a428f0f07b694cab3d1386/output/AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:30:22-64
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:38:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:39:5-80
+	android:name
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:39:22-78
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:40:5-97
+	android:name
+		ADDED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml:40:22-95
 uses-sdk
 INJECTED from /Users/MacbookRetina/Desktop/EventNow2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:25.0.0] /Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/AndroidManifest.xml:21:5-23:78
@@ -236,9 +255,3 @@ ADDED from [com.google.firebase:firebase-common:10.2.1] /Users/MacbookRetina/.an
 		ADDED from [com.google.firebase:firebase-common:10.2.1] /Users/MacbookRetina/.android/build-cache/dfd267d4b6fae7d0d5aa07842a28d70a0a798877/output/AndroidManifest.xml:6:169-192
 	android:name
 		ADDED from [com.google.firebase:firebase-common:10.2.1] /Users/MacbookRetina/.android/build-cache/dfd267d4b6fae7d0d5aa07842a28d70a0a798877/output/AndroidManifest.xml:6:79-143
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:10.2.1] /Users/MacbookRetina/.android/build-cache/9e0febaad031bcc238429d4e2ea45cc4e0a98f81/output/AndroidManifest.xml:20:9-121
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:10.2.1] /Users/MacbookRetina/.android/build-cache/9e0febaad031bcc238429d4e2ea45cc4e0a98f81/output/AndroidManifest.xml:20:66-119
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:10.2.1] /Users/MacbookRetina/.android/build-cache/9e0febaad031bcc238429d4e2ea45cc4e0a98f81/output/AndroidManifest.xml:20:20-65

@@ -43,7 +43,7 @@ import org.json.JSONObject;
  * Created by MacbookRetina on 3/27/17.
  */
 
-public class AddEvent extends AppCompatActivity implements OnMapReadyCallback {
+public class AddEvent extends AppCompatActivity {
     int PLACE_AUTOCOMPLETE_REQUEST_CODE = 1;
     EditText location;
     Intent googlePlace;
@@ -53,6 +53,7 @@ public class AddEvent extends AppCompatActivity implements OnMapReadyCallback {
     Event event;
     String lattitude;
     String longitude;
+    Button map;
 
     String url;
     @Override
@@ -60,11 +61,7 @@ public class AddEvent extends AppCompatActivity implements OnMapReadyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_event);
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
-
-
+        map = (Button) findViewById(R.id.map);
 
         create = (Button) findViewById(R.id.create);
         back = (Button) findViewById(R.id.back);
@@ -138,6 +135,18 @@ public class AddEvent extends AppCompatActivity implements OnMapReadyCallback {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+            }
+        });
+
+        map.setOnClickListener(new View.OnClickListener()
+
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent myIntent = new Intent(AddEvent.this,
+                        GoogleMapRender.class);
+                startActivity(myIntent);
             }
         });
     }
@@ -308,16 +317,5 @@ public class AddEvent extends AppCompatActivity implements OnMapReadyCallback {
             // TODO: do something with the feed
         }
     }
-
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        // Add a marker in Sydney, Australia,
-        // and move the map's camera to the same location.
-        LatLng sydney = new LatLng(-33.852, 151.211);
-        googleMap.addMarker(new MarkerOptions().position(sydney)
-                .title("Marker in Sydney"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-    }
-
 
 }

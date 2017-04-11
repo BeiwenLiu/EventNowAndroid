@@ -188,6 +188,10 @@
         "source": "/Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/res/layout/abc_list_menu_item_radio.xml"
     },
     {
+        "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/layout/map.xml",
+        "source": "/Users/MacbookRetina/Desktop/EventNow2/app/src/main/res/layout/map.xml"
+    },
+    {
         "merged": "/Users/MacbookRetina/Desktop/EventNow2/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
         "source": "/Users/MacbookRetina/.android/build-cache/5cbe822c46ad1e2ec3b567b39286e1502ad69f8b/output/res/layout/abc_expanded_menu_layout.xml"
     },

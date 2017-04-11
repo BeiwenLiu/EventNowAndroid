@@ -11,6 +11,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
     <!-- Include required permissions for Google Maps API to run. -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -42,7 +45,12 @@
         </activity>
         <activity android:name="com.example.macbookretina.eventnow.AddEvent" >
         </activity>
+        <activity android:name="com.example.macbookretina.eventnow.GoogleMapRender" >
+        </activity>
 
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDcNt2MAoMM6HQWS3DVI1narZInJu9KvhE" />
@@ -105,10 +113,6 @@
             android:authorities="com.example.macbookretina.eventnow.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>
